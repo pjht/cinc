@@ -20,6 +20,7 @@ typedef struct _astnode AstNode;
 
 AstNode* make_node(const char* data);
 void add_child(AstNode* parent,AstNode* child);
+void print_tree(AstNode* root,int tabLevel);
 void free_tree(AstNode* root);
 
 #endif /* ast_h */

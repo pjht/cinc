@@ -12,6 +12,8 @@
 		F65A954E21454B31005FCAF5 /* token.c in Sources */ = {isa = PBXBuildFile; fileRef = F65A954D21454B31005FCAF5 /* token.c */; };
 		F661C333214590930021FCCE /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C332214590930021FCCE /* parser.c */; };
 		F661C3362145CE760021FCCE /* ast.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3352145CE760021FCCE /* ast.c */; };
+		F661C3392145D9C40021FCCE /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3382145D9C40021FCCE /* generate.c */; };
+		F661C33C2145DF370021FCCE /* out.s in Sources */ = {isa = PBXBuildFile; fileRef = F661C33B2145DF370021FCCE /* out.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,12 +33,15 @@
 		F61910602142A876003B8798 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F61910672142A8C5003B8798 /* tokenize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tokenize.h; sourceTree = "<group>"; };
 		F61910682142A8C5003B8798 /* tokenize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tokenize.c; sourceTree = "<group>"; };
-		F65A954C21454B21005FCAF5 /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = token.h; path = ../../../../token.h; sourceTree = "<group>"; };
 		F65A954D21454B31005FCAF5 /* token.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = token.c; sourceTree = "<group>"; };
 		F661C331214590930021FCCE /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
 		F661C332214590930021FCCE /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
 		F661C3342145CE760021FCCE /* ast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
 		F661C3352145CE760021FCCE /* ast.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ast.c; sourceTree = "<group>"; };
+		F661C3372145D9C40021FCCE /* generate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = generate.h; sourceTree = "<group>"; };
+		F661C3382145D9C40021FCCE /* generate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = generate.c; sourceTree = "<group>"; };
+		F661C33A2145DE300021FCCE /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = token.h; sourceTree = "<group>"; };
+		F661C33B2145DF370021FCCE /* out.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = out.s; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +78,14 @@
 				F61910672142A8C5003B8798 /* tokenize.h */,
 				F61910682142A8C5003B8798 /* tokenize.c */,
 				F65A954D21454B31005FCAF5 /* token.c */,
-				F65A954C21454B21005FCAF5 /* token.h */,
+				F661C33A2145DE300021FCCE /* token.h */,
 				F661C331214590930021FCCE /* parser.h */,
 				F661C332214590930021FCCE /* parser.c */,
 				F661C3342145CE760021FCCE /* ast.h */,
 				F661C3352145CE760021FCCE /* ast.c */,
+				F661C3372145D9C40021FCCE /* generate.h */,
+				F661C3382145D9C40021FCCE /* generate.c */,
+				F661C33B2145DF370021FCCE /* out.s */,
 			);
 			path = cinc;
 			sourceTree = "<group>";
@@ -139,9 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65A954E21454B31005FCAF5 /* token.c in Sources */,
+				F661C33C2145DF370021FCCE /* out.s in Sources */,
 				F661C3362145CE760021FCCE /* ast.c in Sources */,
 				F61910692142A8C5003B8798 /* tokenize.c in Sources */,
 				F661C333214590930021FCCE /* parser.c in Sources */,
+				F661C3392145D9C40021FCCE /* generate.c in Sources */,
 				F61910612142A876003B8798 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

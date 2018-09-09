@@ -8,7 +8,7 @@
 
 #include "ast.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 #define AST_CHILDREN_START 10
 
 AstNode* make_node(const char* data) {
@@ -27,6 +27,22 @@ void add_child(AstNode* parent,AstNode* child) {
     }
     parent->children[parent->num_children]=child;
     parent->num_children++;
+}
+
+void print_tree(AstNode* root,int tabLevel) {
+    if (tabLevel==0) {
+        printf("Root: %s\n",root->data);
+    }
+    if ((root->num_children)>0) {
+        for (int i=0;i<(root->num_children);i++) {
+            for (int i=0;i<tabLevel;i++) {
+                printf("  ");
+            }
+            printf("Child %d: ",i);
+            printf("%s\n",root->children[i]->data);
+            print_tree(root->children[i],tabLevel+1);
+        }
+    }
 }
 
 void free_tree(AstNode* root) {
