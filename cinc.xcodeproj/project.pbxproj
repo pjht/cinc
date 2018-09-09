@@ -10,6 +10,7 @@
 		F61910612142A876003B8798 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F61910602142A876003B8798 /* main.c */; };
 		F61910692142A8C5003B8798 /* tokenize.c in Sources */ = {isa = PBXBuildFile; fileRef = F61910682142A8C5003B8798 /* tokenize.c */; };
 		F65A954E21454B31005FCAF5 /* token.c in Sources */ = {isa = PBXBuildFile; fileRef = F65A954D21454B31005FCAF5 /* token.c */; };
+		F661C333214590930021FCCE /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C332214590930021FCCE /* parser.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		F61910682142A8C5003B8798 /* tokenize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tokenize.c; sourceTree = "<group>"; };
 		F65A954C21454B21005FCAF5 /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = token.h; path = ../../../../token.h; sourceTree = "<group>"; };
 		F65A954D21454B31005FCAF5 /* token.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = token.c; sourceTree = "<group>"; };
+		F661C331214590930021FCCE /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		F661C332214590930021FCCE /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				F61910682142A8C5003B8798 /* tokenize.c */,
 				F65A954D21454B31005FCAF5 /* token.c */,
 				F65A954C21454B21005FCAF5 /* token.h */,
+				F661C331214590930021FCCE /* parser.h */,
+				F661C332214590930021FCCE /* parser.c */,
 			);
 			path = cinc;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			files = (
 				F65A954E21454B31005FCAF5 /* token.c in Sources */,
 				F61910692142A8C5003B8798 /* tokenize.c in Sources */,
+				F661C333214590930021FCCE /* parser.c in Sources */,
 				F61910612142A876003B8798 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
