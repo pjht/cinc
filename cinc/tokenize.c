@@ -44,14 +44,14 @@ Token* next_token(int* strpos, char* prg, Token* prev) {
         }
         return new_token(TYPE_IDENT, val_from_str(id), prev);
     } else if (isdigit(current)) {
-        char* id=malloc(sizeof(char)*ID_MAX_SIZE+1);
+        char* num=malloc(sizeof(char)*ID_MAX_SIZE+1);
         int length=1;
-        id[0]=current;
+        num[0]=current;
         (*strpos)++;
         while (true) {
             current=prg[*strpos];
             if (isdigit(current)) {
-                id[length]=current;
+                num[length]=current;
                 length++;
                 (*strpos)++;
             } else {
@@ -61,8 +61,8 @@ Token* next_token(int* strpos, char* prg, Token* prev) {
                 break;
             }
         }
-        id[length]=0;
-        return new_token(TYPE_NUM, val_from_int(atoi(id)), prev);
+        num[length]=0;
+        return new_token(TYPE_NUM, val_from_str(num), prev);
     } else if (isblank(current) || current=='\n') {
         (*strpos)++;
         current=prg[*strpos];

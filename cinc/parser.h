@@ -9,6 +9,9 @@
 #ifndef parser_h
 #define parser_h
 
-#include <stdio.h>
+#include "token.h"
+#include "ast.h"
+
+AstNode* parse(Token* prg);
 
 #endif /* parser_h */

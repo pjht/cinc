@@ -11,6 +11,7 @@
 		F61910692142A8C5003B8798 /* tokenize.c in Sources */ = {isa = PBXBuildFile; fileRef = F61910682142A8C5003B8798 /* tokenize.c */; };
 		F65A954E21454B31005FCAF5 /* token.c in Sources */ = {isa = PBXBuildFile; fileRef = F65A954D21454B31005FCAF5 /* token.c */; };
 		F661C333214590930021FCCE /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C332214590930021FCCE /* parser.c */; };
+		F661C3362145CE760021FCCE /* ast.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3352145CE760021FCCE /* ast.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		F65A954D21454B31005FCAF5 /* token.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = token.c; sourceTree = "<group>"; };
 		F661C331214590930021FCCE /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
 		F661C332214590930021FCCE /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		F661C3342145CE760021FCCE /* ast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
+		F661C3352145CE760021FCCE /* ast.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ast.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				F65A954C21454B21005FCAF5 /* token.h */,
 				F661C331214590930021FCCE /* parser.h */,
 				F661C332214590930021FCCE /* parser.c */,
+				F661C3342145CE760021FCCE /* ast.h */,
+				F661C3352145CE760021FCCE /* ast.c */,
 			);
 			path = cinc;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65A954E21454B31005FCAF5 /* token.c in Sources */,
+				F661C3362145CE760021FCCE /* ast.c in Sources */,
 				F61910692142A8C5003B8798 /* tokenize.c in Sources */,
 				F661C333214590930021FCCE /* parser.c in Sources */,
 				F61910612142A876003B8798 /* main.c in Sources */,

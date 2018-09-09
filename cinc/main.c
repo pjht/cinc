@@ -10,17 +10,12 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "tokenize.h"
+#include "ast.h"
+#include "parser.h"
 
 int main(int argc, const char * argv[]) {
     char* prgstr="int main() {\nreturn 0;\n}";
     Token* tokens=tokenize(prgstr);
-    Token* tok=tokens;
-    while (tok) {
-        print_tok(tok);
-        if (tok->type==TYPE_EOF) {
-            break;
-        }
-        tok=tok->next;
-    }
+    AstNode* ast=parse(tokens);
     free_toklist(tokens);
 }
