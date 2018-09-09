@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <string.h>
 
 #define ID_MAX_SIZE 31
 
@@ -36,6 +37,11 @@ Token* next_token(int* strpos, char* prg, Token* prev) {
             }
         }
         id[length]=0;
+        if (strcmp("return",id)==0) {
+            return new_token(TYPE_RETURN, NULL, prev);
+        } else if (strcmp("int",id)==0) {
+           return new_token(TYPE_TYPE, val_from_const_str("int"), prev);
+        }
         return new_token(TYPE_IDENT, val_from_str(id), prev);
     } else if (isdigit(current)) {
         char* id=malloc(sizeof(char)*ID_MAX_SIZE+1);

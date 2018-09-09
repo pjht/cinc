@@ -59,6 +59,12 @@ void print_tok(Token* token) {
             case TYPE_NUM:
                 printf("NUM");
                 break;
+            case TYPE_RETURN:
+                printf("RETURN");
+                break;
+            case TYPE_TYPE:
+                printf("TYPE");
+                break;
             default:
                 break;
         }

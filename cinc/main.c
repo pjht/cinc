@@ -11,8 +11,6 @@
 #include <stdlib.h>
 #include "tokenize.h"
 
-Token* tokenfunc(void);
-
 int main(int argc, const char * argv[]) {
     char* prgstr="int main() {\nreturn 0;\n}";
     Token* tokens=tokenize(prgstr);
