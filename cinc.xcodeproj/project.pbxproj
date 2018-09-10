@@ -13,7 +13,6 @@
 		F661C333214590930021FCCE /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C332214590930021FCCE /* parser.c */; };
 		F661C3362145CE760021FCCE /* ast.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3352145CE760021FCCE /* ast.c */; };
 		F661C3392145D9C40021FCCE /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3382145D9C40021FCCE /* generate.c */; };
-		F661C33C2145DF370021FCCE /* out.s in Sources */ = {isa = PBXBuildFile; fileRef = F661C33B2145DF370021FCCE /* out.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F606D3182145FAB300E817B6 /* out.mys */ = {isa = PBXFileReference; lastKnownFileType = text; path = out.mys; sourceTree = "<group>"; };
 		F619105D2142A876003B8798 /* cinc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cinc; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61910602142A876003B8798 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F61910672142A8C5003B8798 /* tokenize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tokenize.h; sourceTree = "<group>"; };
@@ -41,7 +41,6 @@
 		F661C3372145D9C40021FCCE /* generate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = generate.h; sourceTree = "<group>"; };
 		F661C3382145D9C40021FCCE /* generate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = generate.c; sourceTree = "<group>"; };
 		F661C33A2145DE300021FCCE /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = token.h; sourceTree = "<group>"; };
-		F661C33B2145DF370021FCCE /* out.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = out.s; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +84,7 @@
 				F661C3352145CE760021FCCE /* ast.c */,
 				F661C3372145D9C40021FCCE /* generate.h */,
 				F661C3382145D9C40021FCCE /* generate.c */,
-				F661C33B2145DF370021FCCE /* out.s */,
+				F606D3182145FAB300E817B6 /* out.mys */,
 			);
 			path = cinc;
 			sourceTree = "<group>";
@@ -147,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65A954E21454B31005FCAF5 /* token.c in Sources */,
-				F661C33C2145DF370021FCCE /* out.s in Sources */,
 				F661C3362145CE760021FCCE /* ast.c in Sources */,
 				F61910692142A8C5003B8798 /* tokenize.c in Sources */,
 				F661C333214590930021FCCE /* parser.c in Sources */,

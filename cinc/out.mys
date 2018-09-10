@@ -1,4 +1,4 @@
 .globl _main
 _main:
-mov rax,0
+mov rax,173
 ret
