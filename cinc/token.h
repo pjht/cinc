@@ -31,7 +31,24 @@ typedef struct {
 #define TYPE_EOF 130
 #define TYPE_RETURN 131
 #define TYPE_TYPE 132
-
+#define TYPE_LAND 133
+#define TYPE_LOR 134
+#define TYPE_EQ 135
+#define TYPE_NE 136
+#define TYPE_LE 137
+#define TYPE_GE 138
+#define TYPE_SL 139
+#define TYPE_SR 140
+#define TYPE_COMPSET 141
+#define TYPE_INC 142
+#define TYPE_DEC 143
+#define TYPE_IF 144
+#define TYPE_ELSE 145
+#define TYPE_FOR 146
+#define TYPE_WHILE 147
+#define TYPE_DO 148
+#define TYPE_BREAK 149
+#define TYPE_CONTINUE 150
 struct _token {
     unsigned char type;
     TokenVal* val;

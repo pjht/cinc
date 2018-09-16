@@ -32,7 +32,7 @@ TokenVal* val_from_int(int val) {
 TokenVal* val_from_const_str(const char* val) {
     TokenVal* tval=malloc(sizeof(TokenVal));
     tval->type=strval;
-    tval->strval=val;
+    tval->strval=(char*)val;
     tval->constflag=true;
     return tval;
 }

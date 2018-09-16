@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F61910612142A876003B8798 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F61910602142A876003B8798 /* main.c */; };
 		F61910692142A8C5003B8798 /* tokenize.c in Sources */ = {isa = PBXBuildFile; fileRef = F61910682142A8C5003B8798 /* tokenize.c */; };
+		F62F6C0D214B1BFC00EDE8D2 /* func.c in Sources */ = {isa = PBXBuildFile; fileRef = F62F6C0C214B1BFC00EDE8D2 /* func.c */; };
+		F6544B112147F086002C78F7 /* env.c in Sources */ = {isa = PBXBuildFile; fileRef = F6544B102147F086002C78F7 /* env.c */; };
 		F65A954E21454B31005FCAF5 /* token.c in Sources */ = {isa = PBXBuildFile; fileRef = F65A954D21454B31005FCAF5 /* token.c */; };
 		F661C333214590930021FCCE /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C332214590930021FCCE /* parser.c */; };
 		F661C3362145CE760021FCCE /* ast.c in Sources */ = {isa = PBXBuildFile; fileRef = F661C3352145CE760021FCCE /* ast.c */; };
@@ -28,11 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F606D3182145FAB300E817B6 /* out.mys */ = {isa = PBXFileReference; lastKnownFileType = text; path = out.mys; sourceTree = "<group>"; };
 		F619105D2142A876003B8798 /* cinc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cinc; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61910602142A876003B8798 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F61910672142A8C5003B8798 /* tokenize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tokenize.h; sourceTree = "<group>"; };
 		F61910682142A8C5003B8798 /* tokenize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tokenize.c; sourceTree = "<group>"; };
+		F62F6C0B214B1BFC00EDE8D2 /* func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = func.h; sourceTree = "<group>"; };
+		F62F6C0C214B1BFC00EDE8D2 /* func.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = func.c; sourceTree = "<group>"; };
+		F6544B0F2147F086002C78F7 /* env.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = env.h; sourceTree = "<group>"; };
+		F6544B102147F086002C78F7 /* env.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = env.c; sourceTree = "<group>"; };
 		F65A954D21454B31005FCAF5 /* token.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = token.c; sourceTree = "<group>"; };
 		F661C331214590930021FCCE /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
 		F661C332214590930021FCCE /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		F661C3372145D9C40021FCCE /* generate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = generate.h; sourceTree = "<group>"; };
 		F661C3382145D9C40021FCCE /* generate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = generate.c; sourceTree = "<group>"; };
 		F661C33A2145DE300021FCCE /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = token.h; sourceTree = "<group>"; };
+		F6B6C137214712F3008F5230 /* oplist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = oplist.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,11 @@
 				F661C3352145CE760021FCCE /* ast.c */,
 				F661C3372145D9C40021FCCE /* generate.h */,
 				F661C3382145D9C40021FCCE /* generate.c */,
-				F606D3182145FAB300E817B6 /* out.mys */,
+				F62F6C0B214B1BFC00EDE8D2 /* func.h */,
+				F62F6C0C214B1BFC00EDE8D2 /* func.c */,
+				F6B6C137214712F3008F5230 /* oplist.txt */,
+				F6544B0F2147F086002C78F7 /* env.h */,
+				F6544B102147F086002C78F7 /* env.c */,
 			);
 			path = cinc;
 			sourceTree = "<group>";
@@ -146,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65A954E21454B31005FCAF5 /* token.c in Sources */,
+				F6544B112147F086002C78F7 /* env.c in Sources */,
 				F661C3362145CE760021FCCE /* ast.c in Sources */,
+				F62F6C0D214B1BFC00EDE8D2 /* func.c in Sources */,
 				F61910692142A8C5003B8798 /* tokenize.c in Sources */,
 				F661C333214590930021FCCE /* parser.c in Sources */,
 				F661C3392145D9C40021FCCE /* generate.c in Sources */,
@@ -270,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_SOURCE_FILE_NAMES[arch=*]" = out.s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -278,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_SOURCE_FILE_NAMES[arch=*]" = out.s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

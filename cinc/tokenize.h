@@ -11,6 +11,9 @@
 
 #include "token.h"
 
+#define ID_MAX_SIZE 31
+#define NUM_MAX_SIZE 31
+
 Token* tokenize(char* prg);
 
 void free_toklist(Token* tokens);

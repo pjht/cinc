@@ -1,0 +1,14 @@
+1     ()           Function call LEX
+1     []           Array subscripting LEX
+1     .            Structure and union member access LEX
+1     ->           Structure and union member access through pointer TODO
+1     (type){list} Compound literal LEX
+2     (type)       Type cast LEX
+2     *            Indirection (dereference) LEX
+2     &            Address-of LEX
+2     sizeof       Size-of TODO
+2     _Alignof     Alignment requirement TODO
+3     * / %        Multiplication, division, and remainder DONE
+12    ||           Logical OR DONE
+13    ?:           Ternary conditional PARSE
+14    =            Simple assignment DONE

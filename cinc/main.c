@@ -14,37 +14,38 @@
 #include "parser.h"
 #include "generate.h"
 
-#define PARSER_DEBUG 0
+#define COMPILER_DEBUG 1
 
 int main(int argc, const char * argv[]) {
-    char* prgstr="int main() {\n  return 173;\n}\n";
-    if (PARSER_DEBUG) {
+    char* prgstr="int main(){int j=0;for(int i=0;i<7;i++){if(i==5){break;}j+=2;}return j;}";
+    #if COMPILER_DEBUG
         printf("Program:\n");
         printf("%s",prgstr);
-    }
+    #endif
     Token* tokens=tokenize(prgstr);
-    if (PARSER_DEBUG) {
+    #if COMPILER_DEBUG
         printf("Tokens:\n");
         Token* tok=tokens;
         while (tok) {
             print_tok(tok);
             tok=tok->next;
         }
-    }
+    #endif
     AstNode* ast=parse(tokens);
-    free_toklist(tokens);
-    if (PARSER_DEBUG) {
+    #if COMPILER_DEBUG
         printf("AST:\n");
         print_tree(ast, 0);
-    }
+    #endif
     char* prg=generate_prg(ast);
-    free_tree(ast);
-    if (PARSER_DEBUG) {
+    #if COMPILER_DEBUG
         printf("Output assembly:\n");
         printf("%s",prg);
-    }
-    FILE* outfile=fopen("/Users/peterterpstra/Desktop/projects/xcode/cinc/cinc/out.mys","w");
+    #endif
+    FILE* outfile=fopen("/Users/peterterpstra/Desktop/projects/xcode/cinc/cinc/out.s","w");
+    //compile with gcc -masm=intel out.s -o out
     fputs(prg, outfile);
     fclose(outfile);
     free(prg);
+    free_tree(ast);
+    free_toklist(tokens);
 }

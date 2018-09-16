@@ -39,17 +39,23 @@ void print_tree(AstNode* root,int tabLevel) {
                 printf("  ");
             }
             printf("Child %d: ",i);
-            printf("%s\n",root->children[i]->data);
-            print_tree(root->children[i],tabLevel+1);
+            if (root->children[i]) {
+                printf("%s\n",root->children[i]->data);
+                print_tree(root->children[i],tabLevel+1);
+            } else {
+                printf("NULL\n");
+            }
         }
     }
 }
 
 void free_tree(AstNode* root) {
-    if (root->children) {
-        for (int i=0;i<(root->num_children);i++) {
-            free_tree(root->children[i]);
+    if (root) {
+        if (root->children) {
+            for (int i=0;i<(root->num_children);i++) {
+                free_tree(root->children[i]);
+            }
         }
+        free(root);
     }
-    free(root);
 }
