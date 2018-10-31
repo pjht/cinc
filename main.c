@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "tokenize.h"
 #include "ast.h"
 #include "parser.h"
@@ -42,10 +43,11 @@ int main(int argc, const char * argv[]) {
         printf("%s",prg);
     #endif
     FILE* outfile=fopen("/Users/peterterpstra/Desktop/projects/xcode/cinc/cinc/out.s","w");
-    //compile with gcc -masm=intel out.s -o out
     fputs(prg, outfile);
     fclose(outfile);
     free(prg);
     free_tree(ast);
     free_toklist(tokens);
+    execlp("gcc","gcc","-masm=intel","-o","/Users/peterterpstra/Desktop/projects/xcode/cinc/cinc/out","/Users/peterterpstra/Desktop/projects/xcode/cinc/cinc/out.s",(char*)NULL);
+    perror("cinc");
 }
